@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @JeiPlugin
+@SuppressWarnings({"rawtypes", "unchecked"})
 public class TanJeiPlugin implements IModPlugin {
     static final ResourceLocation UID = new ResourceLocation("tanjeicompat", "jei_plugin");
     static final ResourceLocation TYPE_ID = new ResourceLocation("toughasnails", "water_purifying");
@@ -39,8 +40,8 @@ public class TanJeiPlugin implements IModPlugin {
         if (type == null || mc.level == null) {
             return;
         }
-        List<Recipe<?>> found = new ArrayList<>();
-        for (Recipe<?> r : mc.level.getRecipeManager().getRecipes()) {
+        List<Recipe> found = new ArrayList<>();
+        for (Recipe r : mc.level.getRecipeManager().getRecipes()) {
             if (r.getType() == type) {
                 found.add(r);
             }
