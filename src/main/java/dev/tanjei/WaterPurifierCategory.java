@@ -34,7 +34,7 @@ public class WaterPurifierCategory implements IRecipeCategory<Recipe> {
         Block block = ForgeRegistries.BLOCKS.getValue(TanJeiPlugin.BLOCK_ID);
         ItemStack iconStack = block != null ? new ItemStack(block) : ItemStack.EMPTY;
         this.icon = gui.createDrawableIngredient(VanillaTypes.ITEM_STACK, iconStack);
-        this.arrow = gui.createDrawable(new ResourceLocation("jei", "textures/jei/gui/gui_vanilla.png"), 82, 128, 24, 17);
+        this.arrow = gui.createDrawable(new ResourceLocation("minecraft", "textures/gui/container/furnace.png"), 79, 34, 24, 17);
     }
 
     @Override
